@@ -877,7 +877,7 @@
                 <button class="btn-copy" onclick="copyReferralCode()"><i class="fas fa-copy"></i> Copy</button>
             </div>
             <!-- ⚠️ DOMAIN: replace blackrocksinvestments.com with your real domain -->
-            <div class="ref-link" id="refLink">https://blackrocksinvestments.com/?ref=6JPO491</div>
+            <div class="ref-link" id="refLink">https://blackrocksinvestments.onrender.com/?ref=ADMIN123</div>
             <button class="btn-outline-full" onclick="copyReferralLink()"><i class="fas fa-copy"></i> Copy Invite Link</button>
         </div>
         <div class="how-it-works">
@@ -2113,7 +2113,7 @@ function loadReferralPage(){
     const code = user.referralCode || '6JPO491';
     document.getElementById('refCode').textContent = code;
     // ⚠️ DOMAIN: replace blackrocksinvestments.com with your real domain
-    document.getElementById('refLink').textContent = 'https://blackrocksinvestments.com/?ref=' + code;
+    document.getElementById('refLink').textContent = 'https://blackrocksinvestments.onrender.com/?ref=' + code;
     const refs = APP_DATA.referrals.filter(r => normalizePhone(r.referrerPhone) === normalizePhone(user.phone));
     document.getElementById('totalReferrals').textContent = refs.length;
     document.getElementById('withRentals').textContent = refs.filter(r => r.hasRented).length;
@@ -2211,7 +2211,7 @@ async function redeemVoucher(){
     input.disabled = true; setTimeout(() => { input.disabled = false; }, 1500);
 }
 
-function openTelegram(){ window.open('https://t.me/aifuturebikes', '_blank'); }
+function openTelegram(){ window.open('https://t.me/blackrocksinvestments', '_blank'); }
 function selectNetwork(net){ selectedWithdrawNetwork = net; document.getElementById('mtnBtn').classList.toggle('active', net==='mtn'); document.getElementById('airtelBtn').classList.toggle('active', net==='airtel'); }
 
 function setWithdrawAmount(amount){
